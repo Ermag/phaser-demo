@@ -2,7 +2,7 @@
 	"name": "phaser3-demo",
 	"version": "0.1.0",
 	"description": "A Phaser 3 Project Demo",
-	"main": "src/index.js",
+	"main": "src/main.js",
 	"scripts": {
 		"build": "webpack --config webpack/prod.js ",
 		"start": "webpack-dev-server --config webpack/base.js --open"
