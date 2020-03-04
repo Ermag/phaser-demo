@@ -1,3 +1,4 @@
+import Button from '../../entities/Button'
 import logoImg from '../../assets/logo.png'
 import buttonSprite from '../../assets/buttons.png'
 
@@ -14,19 +15,11 @@ class SplashScreen extends Phaser.Scene {
     }
 
     create (data)  {
-        // this.add.existing(new buttonSprite(100, 100, 'button'), function () { // do smth })
-        const playButton = this.add.sprite(100, 100, 'button', 0).setInteractive()
-
-        playButton.on('pointerover', function () {
-            this.setFrame(2)
-        })
-
-        playButton.on('pointerout', function () {
-            this.setFrame(0)
-        })
-
-        playButton.on('pointerdown', function () {
-            this.setFrame(1)
+        const playButton = new Button({
+            scene: this,
+            key: 'button',
+            x: 140,
+            y: 180
         })
 
         playButton.on('pointerup', function () {

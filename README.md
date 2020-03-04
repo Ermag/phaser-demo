@@ -1,4 +1,4 @@
-# Phaser 3 Webpack Project Template
+# Phaser 3 Demo Project
 
 A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/)
 that includes hot-reloading for development and production-ready builds.
@@ -47,7 +47,7 @@ If you want to customize your build, such as adding a new webpack loader or plug
 modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create
 new configuration files and target them in specific npm tasks inside of `package.json'.
 
-## Deploying Code
+## Deploy
 After you run the `npm run build` command, your code will be built into a single bundle located at 
 `dist/bundle.min.js` along with any other assets you project depended. 
 
