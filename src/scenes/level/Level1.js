@@ -1,3 +1,4 @@
+import loader from '../../utils/loader'
 import backgroundImg from '../../assets/background.jpg'
 
 class Level1 extends Phaser.Scene {
@@ -8,6 +9,8 @@ class Level1 extends Phaser.Scene {
     init(data) {}
 
     preload () {
+        loader(this)
+        
         this.load.image('background', backgroundImg)
     }
 

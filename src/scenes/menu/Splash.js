@@ -1,3 +1,4 @@
+import loader from '../../utils/loader'
 import Button from '../../entities/Button'
 import logoImg from '../../assets/logo.png'
 import { buttonSprite } from '../../assets/sprite'
@@ -11,6 +12,8 @@ class SplashScreen extends Phaser.Scene {
     init(data) {}
 
     preload () {
+        loader(this)
+
         this.load.spritesheet('button', buttonSprite, { frameWidth: 193, frameHeight: 71 })
         this.load.image('logo', logoImg)
         this.load.audio('click', clickSound)
