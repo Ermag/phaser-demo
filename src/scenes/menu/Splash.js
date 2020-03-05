@@ -31,7 +31,7 @@ class SplashScreen extends Phaser.Scene {
 
 		playButton.on('pointerup', function () {
 			clickSound.play()
-			this.scene.start('Level1')
+			this.scene.switch('Level1')
 		}, this)
 
 		this.tweens.add({
