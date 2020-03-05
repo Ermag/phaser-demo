@@ -16,14 +16,14 @@ class Button extends Phaser.GameObjects.Sprite {
 	}
 
 	onDown() {
-        this.setFrame(0)
-    }
-    onOver() {
-        this.setFrame(2)
-    }
-    onUp() {
-        this.setFrame(1)
-    }
+		this.setFrame(0)
+	}
+	onOver() {
+		this.setFrame(2)
+	}
+	onUp() {
+		this.setFrame(1)
+	}
 }
 
 export default Button
