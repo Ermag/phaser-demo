@@ -1,6 +1,7 @@
 import Button from '../../entities/Button'
 import logoImg from '../../assets/logo.png'
-import buttonSprite from '../../assets/buttons.png'
+import { buttonSprite } from '../../assets/sprite'
+import { clickSound } from '../../assets/audio'
 
 class SplashScreen extends Phaser.Scene {
     constructor () {
@@ -12,9 +13,12 @@ class SplashScreen extends Phaser.Scene {
     preload () {
         this.load.spritesheet('button', buttonSprite, { frameWidth: 193, frameHeight: 71 })
         this.load.image('logo', logoImg)
+        this.load.audio('click', clickSound)
     }
 
     create (data)  {
+        const logo = this.add.image(400, 150, 'logo')
+        const clickSound = this.sound.add('click')
         const playButton = new Button({
             scene: this,
             key: 'button',
@@ -23,10 +27,9 @@ class SplashScreen extends Phaser.Scene {
         })
 
         playButton.on('pointerup', function () {
+            clickSound.play()
             this.scene.start('Level1')
         }, this)
-
-        const logo = this.add.image(400, 150, 'logo')
 
         this.tweens.add({
             targets: logo,

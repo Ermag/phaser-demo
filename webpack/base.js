@@ -23,6 +23,10 @@ module.exports = {
 			{
 				test: /\.(gif|png|jpe?g|svg|xml)$/i,
 				use: 'file-loader'
+			},
+			{
+				test: /\.mp3$/,
+				use: 'file-loader?hash=sha512&digest=hex&name=[name]-[hash].[ext]'
 			}
 		]
 	},

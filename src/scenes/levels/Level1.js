@@ -1,3 +1,5 @@
+import backgroundImg from '../../assets/background.jpg'
+
 class Level1 extends Phaser.Scene {
     constructor () {
         super('Level1')
@@ -5,9 +7,13 @@ class Level1 extends Phaser.Scene {
 
     init(data) {}
 
-    preload () {}
+    preload () {
+        this.load.image('background', backgroundImg)
+    }
 
-    create (data)  {}
+    create (data)  {
+        this.add.sprite(0, 0, 'background').setOrigin(0, 0)
+    }
     
     update(time, delta) {}
 }
